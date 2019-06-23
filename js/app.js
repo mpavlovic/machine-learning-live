@@ -101,6 +101,9 @@ function getNamedEntities() {
     $.ajax({
         type: "POST",
         url: nerEndpoint,
+        headers: {
+            'x-api-key': 'fZimPDbYTSafjL3Se2dEe6M70GDDuzsW3fT3Pbnk'
+        },
         data: inputText,
         contentType: "text/plain",
         dataType: "json",
@@ -164,6 +167,9 @@ function sendResNetPredictionRequest(photoKey) {
     return $.ajax({
         type: 'GET',
         url: resnet50Endpoint,
+        headers: {
+            'x-api-key': 'Fn01cAPooGpBrIe3RZDW97T4XRctf37aJcxIzBe0'
+        },
         data: {
             imageKey: photoKey
         },
@@ -182,6 +188,9 @@ function sendInceptionV3PredictionRequest(photoKey) {
     return $.ajax({
         type: 'GET',
         url: inceptionV3Endpoint,
+        headers: {
+            'x-api-key': 'XvhHKoFwno8leIpi3kKZD3gX9N2bTNjqIBMlm0Re'
+        },
         data: {
             imageKey: photoKey
         },
@@ -336,6 +345,9 @@ function sendHousePredictionRequest() {
     $.ajax({
         type: 'GET',
         url: housingEndpoint,
+        headers: {
+            'x-api-key': 'gKeTaqoKP97Mwuf0vkRpC7Jxoso28VDwQWx0jUne'
+        },
         data: {
             medInc: $('#medInc').val(),
             houseAge: $('#houseAge').val(),
